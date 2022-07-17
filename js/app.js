@@ -4,6 +4,9 @@ const sliderNext = document.querySelector('.slider__next')
 const burgerOpen = document.querySelector('.menu-open')
 const burgerClose = document.querySelector('.menu-close')
 const navMenu = document.querySelector('.header__nav')
+const btnPopupOpen = document.querySelectorAll('#btn-popup')
+const btnPopupClose = document.querySelector('.popup__close-btn')
+const popup = document.querySelector('.popup')
 
 let index = 0
 
@@ -59,4 +62,15 @@ burgerOpen.addEventListener('click', () => {
 burgerClose.addEventListener('click', () => {
     navMenu.classList.remove('header__nav--active')
     burgerClose.classList.remove('menu-close--active')
+})
+
+for (let btn of btnPopupOpen) {
+    btn.addEventListener('click', () => {
+        popup.classList.toggle('popup--active')
+    })
+}
+
+
+btnPopupClose.addEventListener('click', () => {
+    popup.classList.remove('popup--active')
 })
