@@ -64,11 +64,11 @@ burgerClose.addEventListener('click', () => {
     burgerClose.classList.remove('menu-close--active')
 })
 
-for (let btn of btnPopupOpen) {
+btnPopupOpen.forEach(btn => {
     btn.addEventListener('click', () => {
         popup.classList.toggle('popup--active')
     })
-}
+})
 
 
 btnPopupClose.addEventListener('click', () => {
