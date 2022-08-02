@@ -4,7 +4,7 @@ const sliderNext = document.querySelector('.slider__next')
 const burgerOpen = document.querySelector('.menu-open')
 const burgerClose = document.querySelector('.menu-close')
 const navMenu = document.querySelector('.header__nav')
-const btnPopupOpen = document.querySelectorAll('#btn-popup')
+const btnPopupOpen = document.querySelectorAll('.btn-popup')
 const btnPopupClose = document.querySelector('.popup__close-btn')
 const popup = document.querySelector('.popup')
 
@@ -69,7 +69,6 @@ btnPopupOpen.forEach(btn => {
         popup.classList.toggle('popup--active')
     })
 })
-
 
 btnPopupClose.addEventListener('click', () => {
     popup.classList.remove('popup--active')
