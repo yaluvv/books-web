@@ -73,3 +73,9 @@ btnPopupOpen.forEach(btn => {
 btnPopupClose.addEventListener('click', () => {
     popup.classList.remove('popup--active')
 })
+
+popup.addEventListener('click', (e) => {
+    if (e.target == popup) {
+        popup.classList.remove('popup--active')
+    }
+})
