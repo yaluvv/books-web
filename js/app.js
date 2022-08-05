@@ -4,6 +4,7 @@ const sliderNext = document.querySelector('.slider__next')
 const burgerOpen = document.querySelector('.menu-open')
 const burgerClose = document.querySelector('.menu-close')
 const navMenu = document.querySelector('.header__nav')
+const navLinks = document.querySelectorAll('.header__nav-link')
 const btnPopupOpen = document.querySelectorAll('.btn-popup')
 const btnPopupClose = document.querySelector('.popup__close-btn')
 const popup = document.querySelector('.popup')
@@ -79,3 +80,9 @@ popup.addEventListener('click', (e) => {
         popup.classList.remove('popup--active')
     }
 })
+
+
+navLinks.forEach(n => n.addEventListener('click', () => {
+    navMenu.classList.remove('header__nav--active')
+    burgerClose.classList.remove('menu-close--active')
+}))
